@@ -1,0 +1,57 @@
+.shop-page {
+    margin: 150px 20px;
+}
+
+.shop-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop-item {
+    /* display: flex; */
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid black;
+    padding-bottom: 20px;
+    padding-top: 6px;
+}
+
+.item-info {
+    flex: 3;
+}
+
+.item-image {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.item-image img {
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.item-price {
+    flex: 1;
+}
+
+.purchase-link {
+    flex: 1;
+}
+
+.purchase-link a {
+    text-decoration: none;
+}
+
+.purchase-link a:hover {
+    text-decoration: underline;
+}
+
+h3, p, a {
+    font-size: var(--font-size);
+    font-weight: normal;
+    line-height: 1.2;
+}

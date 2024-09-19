@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  background-color: inherit;
+  border: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Roman;
+  src: url(../public/Implicit-Upright-VF-Web.woff2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body {
+  height: 100%;
+  font-family: var(--font-family);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul, ol {
+  list-style: none;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button, input {
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button, input {
+  box-sizing: border-box;
+}
+
+.threshold-wrapper {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
+  letter-spacing: -0.5px;
+  background-color: white; 
+  mix-blend-mode: multiply;
+  padding: 10px;
+  line-height: 1.1;
+}
+
+.threshold-wrapper ::selection {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.margin-wrapper {
+  /* margin-top: 50px; */
 }

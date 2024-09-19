@@ -1,0 +1,82 @@
+.navigation {
+
+}
+
+.navigation-wrapper {
+    z-index: 1000;
+        position: fixed;
+    /* width: 600px; */
+    left: 50%;
+    z-index: 1000;
+    transform: translateX(-50%);
+    /* left: 0; */
+    mix-blend-mode: multiply;
+    top: 0;
+    background-color: white;
+    color: var(--grey);
+}
+
+.navigation nav ul {
+    /* list-style-type: none; */
+    /* padding: 0; */
+    text-align: center;
+    /* display: flex;  */
+    /* justify-content: center; */
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.navigation nav ul li {
+    margin: 0;
+}
+
+.image-info {
+    text-align: center;
+}
+
+.image-info-wrapper {
+    /* margin-top: -10px;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    font-size: var(--font-size);
+    filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
+    letter-spacing: -0.5px;
+    mix-blend-mode: multiply;
+    line-height: 1.1; */
+    z-index: 999;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%; 
+    color: var(--grey);
+    mix-blend-mode: multiply;
+    font-size: var(--font-size);
+    filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.image-info-wrapper ::selection {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+
+.image-info:hover{
+    /* text-decoration: underline; */
+    color: black;
+}
+
+.navigation nav ul li:hover {
+    /* text-decoration: underline; */
+    color: black;
+}
+
+
+.active-link {
+    /* Custom CSS styling for the active link */
+    /* font-weight: bold; */
+    /* text-decoration: underline; */
+    color: black;
+  }
+

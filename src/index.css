@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --font-size: 20px;
+  --font-weight: 500;
+  --spacing: 1.5rem;
+  /* --threshold-blur: 0.7px;
+  --threshold-contrast: 100; */
+  --grey: rgb(170, 170, 170);
+  --font-family: Roman;
+}
+
+body {
+  overflow: auto;              /* Enable scrolling */
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+}
+
+::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, and Opera */
+}

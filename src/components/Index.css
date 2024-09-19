@@ -1,0 +1,132 @@
+/* src/components/Index.css */
+
+@media only screen and (min-width: 599px) {
+    .mobile-index {
+        display: none;
+    }
+    .index-page {
+        font-size: var(--font-size);
+        margin: 150px 30px;
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .desktop-index {
+        display: none;
+    }
+
+    .index-page {
+        font-size: var(--font-size);
+        margin: 150px 10px;
+        max-width: 100%;
+    }
+}
+
+
+
+.series-section {
+    padding-bottom: 60px;
+    border-top: 1px solid #000;
+}
+
+.series-item {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 800px; */
+    padding-top: 6px;
+    font-size: 20px;
+    /* margin: auto; */
+}
+
+.series-item:hover {
+    text-decoration: underline;
+}
+
+.series-title {
+    flex: 2;
+    /* text-align: center; */
+}
+
+.series-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.series-nature {
+    flex: 2;
+    text-align: left;
+}
+
+.series-medium {
+    flex: 1;
+    /* text-align: left; */
+}
+
+.series-info {
+    flex: 1;
+    text-align: right;
+}
+
+.series-title p,
+.series-medium p,
+.series-info p {
+    margin: 0;
+}
+
+.mobile-index .series-title,
+.mobile-index #sort-title {
+    flex: 3;
+}
+
+
+
+.sorting-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* color: var(--grey); */
+    color: black;
+}
+
+.sorting-buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-size);
+    cursor: pointer;
+    font-family: var(--font-family);
+    text-align: left;
+}
+
+.sorting-buttons button:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Adjust the size of the sort direction triangle */
+.sort-direction {
+    font-size: 12px;
+    /* Smaller size for the arrow */
+    margin-left: 2px;
+    /* Small margin to separate it from the text */
+}
+
+/* Style for the active filter */
+.active-filter {
+    color: black;
+}
+
+#sort-title,
+#sort-nature {
+    flex: 2;
+}
+
+#sort-medium {
+    flex: 1;
+}
+
+#sort-date {
+    flex: 1;
+    text-align: right;
+}

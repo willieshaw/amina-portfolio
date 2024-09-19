@@ -1,0 +1,96 @@
+
+
+.slideshow-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+}
+
+.left-half,
+.right-half {
+  position: absolute;
+  top: 0;
+  width: 50vw; /* Half width */
+  height: 100vh; /* Full height */
+}
+
+.left-half {
+  left: 0;
+  cursor: w-resize; /* Left half shows left arrow */
+}
+
+.right-half {
+  right: 0;
+  cursor: e-resize; /* Right half shows right arrow */
+}
+
+.image-container {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* Circle for hover effect */
+.hover-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Circle on the left side of the screen */
+.hover-circle.left {
+  left: 40vw;
+  top: 10px;
+}
+
+/* Circle on the right side of the screen */
+.hover-circle.right {
+  left: 60vw;
+  top: 10px;
+}
+
+.sidebar {
+  z-index: 4;
+  position: relative;
+  width: 25%;
+  padding: 20px;
+  color: black;
+  text-align: left;
+}
+
+.sidebar h2 {
+  font-weight: normal;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  cursor: pointer;
+}
