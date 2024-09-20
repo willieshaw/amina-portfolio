@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/amina-portfolio/static/css/main.23ac3438.css",
-    "main.js": "/amina-portfolio/static/js/main.1d039c24.js",
+    "main.css": "/amina-portfolio/static/css/main.893b9a01.css",
+    "main.js": "/amina-portfolio/static/js/main.32f364cf.js",
     "static/js/453.f86bc380.chunk.js": "/amina-portfolio/static/js/453.f86bc380.chunk.js",
     "static/media/Implicit-Upright-VF-Web.woff2": "/amina-portfolio/static/media/Implicit-Upright-VF-Web.971c488cd7ef623e6e24.woff2",
     "index.html": "/amina-portfolio/index.html",
-    "main.23ac3438.css.map": "/amina-portfolio/static/css/main.23ac3438.css.map",
-    "main.1d039c24.js.map": "/amina-portfolio/static/js/main.1d039c24.js.map",
+    "main.893b9a01.css.map": "/amina-portfolio/static/css/main.893b9a01.css.map",
+    "main.32f364cf.js.map": "/amina-portfolio/static/js/main.32f364cf.js.map",
     "453.f86bc380.chunk.js.map": "/amina-portfolio/static/js/453.f86bc380.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23ac3438.css",
-    "static/js/main.1d039c24.js"
+    "static/css/main.893b9a01.css",
+    "static/js/main.32f364cf.js"
   ]
 }
