@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/amina-portfolio/static/css/main.5bfbac5c.css",
+    "main.css": "/amina-portfolio/static/css/main.1f4d6127.css",
     "main.js": "/amina-portfolio/static/js/main.cb56ab22.js",
     "static/js/453.f86bc380.chunk.js": "/amina-portfolio/static/js/453.f86bc380.chunk.js",
     "static/media/Implicit-Upright-VF-Web.woff2": "/amina-portfolio/static/media/Implicit-Upright-VF-Web.971c488cd7ef623e6e24.woff2",
     "index.html": "/amina-portfolio/index.html",
-    "main.5bfbac5c.css.map": "/amina-portfolio/static/css/main.5bfbac5c.css.map",
+    "main.1f4d6127.css.map": "/amina-portfolio/static/css/main.1f4d6127.css.map",
     "main.cb56ab22.js.map": "/amina-portfolio/static/js/main.cb56ab22.js.map",
     "453.f86bc380.chunk.js.map": "/amina-portfolio/static/js/453.f86bc380.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bfbac5c.css",
+    "static/css/main.1f4d6127.css",
     "static/js/main.cb56ab22.js"
   ]
 }
