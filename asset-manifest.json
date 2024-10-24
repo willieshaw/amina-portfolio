@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/amina-portfolio/static/css/main.1f4d6127.css",
-    "main.js": "/amina-portfolio/static/js/main.cb56ab22.js",
+    "main.css": "/amina-portfolio/static/css/main.ef242c9a.css",
+    "main.js": "/amina-portfolio/static/js/main.944da8cb.js",
     "static/js/453.f86bc380.chunk.js": "/amina-portfolio/static/js/453.f86bc380.chunk.js",
+    "static/media/AkzidenzGroteskPro-Md.otf": "/amina-portfolio/static/media/AkzidenzGroteskPro-Md.84d92152f38f0acefa99.otf",
+    "static/media/SabonLTStd-Roman.otf": "/amina-portfolio/static/media/SabonLTStd-Roman.bb288945c434298959a8.otf",
     "static/media/Implicit-Upright-VF-Web.woff2": "/amina-portfolio/static/media/Implicit-Upright-VF-Web.971c488cd7ef623e6e24.woff2",
     "index.html": "/amina-portfolio/index.html",
-    "main.1f4d6127.css.map": "/amina-portfolio/static/css/main.1f4d6127.css.map",
-    "main.cb56ab22.js.map": "/amina-portfolio/static/js/main.cb56ab22.js.map",
+    "main.ef242c9a.css.map": "/amina-portfolio/static/css/main.ef242c9a.css.map",
+    "main.944da8cb.js.map": "/amina-portfolio/static/js/main.944da8cb.js.map",
     "453.f86bc380.chunk.js.map": "/amina-portfolio/static/js/453.f86bc380.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f4d6127.css",
-    "static/js/main.cb56ab22.js"
+    "static/css/main.ef242c9a.css",
+    "static/js/main.944da8cb.js"
   ]
 }
