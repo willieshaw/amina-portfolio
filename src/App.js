@@ -1,26 +1,39 @@
-// src/App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useParams, useNavigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Slideshow from './components/Slideshow';
+import Thumbnails from './components/Thumbnails';
 import Info from './components/Info';
 import Index from './components/Index';
 import Homepage from './components/Homepage';
 import Shop from './components/Shop';
 import './App.css';
 
+// Slideshow component with params
 const SlideshowWithParams = ({ setNavigationInfo }) => {
-  const { seriesId } = useParams(); // Get seriesId from the URL params
-  return <Slideshow seriesId={seriesId} setNavigationInfo={setNavigationInfo} />;
+  const { seriesId, slideIndex } = useParams();
+  return <Slideshow seriesId={seriesId} initialIndex={parseInt(slideIndex)} setNavigationInfo={setNavigationInfo} />;
+};
+
+// Thumbnails component with params
+const ThumbnailsWithParams = () => {
+  const { seriesId } = useParams();
+  const navigate = useNavigate(); // Use useNavigate to programmatically navigate
+
+  const handleThumbnailClick = (index) => {
+    // Navigate to the clicked image's slideshow route
+    navigate(`/slideshow/${seriesId}/${index}`);
+  };
+
+  return <Thumbnails seriesId={seriesId} onThumbnailClick={handleThumbnailClick} />;
 };
 
 const App = () => {
-  // State to hold the current slideshow navigation info
   const [navigationInfo, setNavigationInfo] = useState({
     currentSlideData: null,
     currentSeriesData: null,
     currentIndex: 0,
-    totalSlides: 0
+    totalSlides: 0,
   });
 
   return (
@@ -39,14 +52,14 @@ const App = () => {
                   currentIndex={navigationInfo.currentIndex}
                   totalSlides={navigationInfo.totalSlides}
                 />
-                <Homepage setNavigationInfo={setNavigationInfo} /> {/* Render Homepage */}
+                <Homepage setNavigationInfo={setNavigationInfo} />
               </>
             }
           />
 
-          {/* Slideshow route for each series by id */}
+          {/* Slideshow route with seriesId and slideIndex */}
           <Route
-            path="/slideshow/:seriesId"
+            path="/slideshow/:seriesId/:slideIndex"
             element={
               <>
                 <Navigation
@@ -61,7 +74,24 @@ const App = () => {
             }
           />
 
-          {/* Info route */}
+          {/* Thumbnails route */}
+          <Route
+            path="/thumbnails/:seriesId"
+            element={
+              <>
+                <Navigation
+                  isSlideshow={false}
+                  currentSlideData={navigationInfo.currentSlideData}
+                  currentSeriesData={navigationInfo.currentSeriesData}
+                  currentIndex={navigationInfo.currentIndex}
+                  totalSlides={navigationInfo.totalSlides}
+                />
+                <ThumbnailsWithParams />
+              </>
+            }
+          />
+
+          {/* Other routes */}
           <Route
             path="/info"
             element={
@@ -72,7 +102,6 @@ const App = () => {
             }
           />
 
-          {/* Index route */}
           <Route
             path="/index"
             element={
@@ -83,14 +112,13 @@ const App = () => {
             }
           />
 
-          {/* Shop route */}
           <Route
             path="/shop"
-            element={              
-            <>
-              <Navigation isSlideshow={false} />
-              <Shop />
-            </>
+            element={
+              <>
+                <Navigation isSlideshow={false} />
+                <Shop />
+              </>
             }
           />
         </Routes>

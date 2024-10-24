@@ -1,65 +1,54 @@
 /* src/components/Info.css */
 
-@media only screen and (min-width: 599px) {
+  
 
-    .info-page {
-        /* max-width: 800px; */
-        margin: 150px 30px;
-        /* text-align: center; */
-    }
-
-    .section-body {
-        flex: 1;
-    }
-
-    .section-body, .section-headline {
-        font-size: var(--font-size);
-    }
-
+.info-page {
+    max-width: 600px;
+    margin:  0px  0px 0px  var(--margin-left);
+    /* Center the content horizontally and add space from the top */
+    /* padding: 20px; */
+    /* font-weight: bold; */
+    font-family: var(--sans);
 }
-
-@media only screen and (max-width: 600px) {
-    .info-page {
-        /* max-width: 800px; */
-        margin: 150px 10px;
-        /* text-align: center; */
-    }
-
-    .section-body {
-        flex: 2;
-    }
-
-    .section-body, .section-headline {
-        font-size: 16px;
-    }
-
-}
-
-
 
 .info-section {
     margin-bottom: 22px;
-    /* border-top: 1px solid #000; */
-    padding-top: 6px;
-    display: flex;
-    align-content: left;
+    /* margin-top: 50px; */
 }
 
 .section-headline {
     font-weight: normal;
-    text-align: left;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    flex: 1;
+    font-size: var(--font-size);
 }
 
 .section-body {
     white-space: pre-wrap;
+    font-size: var(--font-size);
     line-height: 1.2;
-
+    
 }
 
 .info-section p {
-    /* margin: 0 0 2px 0; */
+    /* margin: 2px 0; */
 }
 
+footer {
+    margin-top: 200px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #3e3e3e;
+}
+
+
+@media only screen and (max-width: 599px) {
+    .info-page {
+        margin: 0px 10px;
+    }
+
+    .info-page-wrapper {
+        margin-top: var(--top-margin);
+        /* margin-top: 50px; */
+    }
+    
+    
+  }

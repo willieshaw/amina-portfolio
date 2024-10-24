@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link } from 'react-router-dom';
 import imageData from '../data/imageData';
 import './Index.css';
 
 const Index = () => {
   const [sortBy, setSortBy] = useState('date'); // Default sorting by date
-  const [sortDirection, setSortDirection] = useState('desc'); // Default sorting direction is now descending
+  const [sortDirection, setSortDirection] = useState('desc'); // Default sorting direction is descending
 
   // Sort function to handle different sorting columns
   const sortedData = [...imageData]
@@ -31,10 +31,10 @@ const Index = () => {
       return 0;
     });
 
-  // Toggle sorting direction
+  // Updated toggle sorting direction
   const handleSort = (column) => {
     if (sortBy === column) {
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc'); // Toggle between ascending and descending
+      setSortDirection((prevDirection) => (prevDirection === 'asc' ? 'desc' : 'asc')); // Toggle between ascending and descending
     } else {
       setSortBy(column);
       setSortDirection('desc'); // Default to descending when switching columns
@@ -43,64 +43,67 @@ const Index = () => {
 
   return (
     <div className="index-page">
-
       <div className="desktop-index">
-      <div className="sorting-buttons">
-        <button
-          className={sortBy === 'title' ? 'active-filter' : ''}
-          onClick={() => handleSort('title')}
-          id='sort-title'
-        >
-          Title
-          {sortBy === 'title' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-        <button
-          className={sortBy === 'natureOfWork' ? 'active-filter' : ''}
-          onClick={() => handleSort('natureOfWork')}
-          id='sort-nature'
-        >
-          Client
-          {sortBy === 'natureOfWork' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-        <button
-          className={sortBy === 'medium' ? 'active-filter' : ''}
-          onClick={() => handleSort('medium')}
-          id='sort-medium'
-        >
-          Medium
-          {sortBy === 'medium' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-        <button
-          className={sortBy === 'date' ? 'active-filter' : ''}
-          onClick={() => handleSort('date')}
-          id='sort-date'
-        >
-          Date
-          {sortBy === 'date' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-      </div>
+        {/* <div className='threshold-wrapper'>
+          <div className="sorting-buttons">
+            <button
+              className={sortBy === 'title' ? 'active-filter' : ''}
+              onClick={() => handleSort('title')}
+              id="sort-title"
+            >
+              Title
+              {sortBy === 'title' && (
+                <span className="sort-direction">{sortDirection === 'asc' ? '▲' : '▼'}</span>
+              )}
+            </button>
+            <button
+              className={sortBy === 'natureOfWork' ? 'active-filter' : ''}
+              onClick={() => handleSort('natureOfWork')}
+              id="sort-nature"
+            >
+              Client
+              {sortBy === 'natureOfWork' && (
+                <span className="sort-direction">{sortDirection === 'asc' ? '▲' : '▼'}</span>
+              )}
+            </button>
+            <button
+              className={sortBy === 'medium' ? 'active-filter' : ''}
+              onClick={() => handleSort('medium')}
+              id="sort-medium"
+            >
+              Medium
+              {sortBy === 'medium' && (
+                <span className="sort-direction">{sortDirection === 'asc' ? '▲' : '▼'}</span>
+              )}
+            </button>
+            <button
+              className={sortBy === 'date' ? 'active-filter' : ''}
+              onClick={() => handleSort('date')}
+              id="sort-date"
+            >
+              Date
+              {sortBy === 'date' && (
+                <span className="sort-direction">{sortDirection === 'asc' ? '▲' : '▼'}</span>
+              )}
+            </button>
+          </div>
+        </div> */}
 
         {sortedData.map((series) => (
           <div key={series.id} className="series-section">
-            <div className="margin-wrapper">
-              <Link to={`/slideshow/${series.id}`}>
+            <Link to={`/slideshow/${series.id}/0`}>
+            <div className="series-thumbnail">
+                    <img
+                      key={series.id}
+                      src={`${process.env.PUBLIC_URL}/images/${series.thumbnail}`}
+                      alt={series.series}
+                    />
+                  </div>
+              {/* <div className='threshold-wrapper'> */}
+                
                 <div className="series-item">
+                  {/* Thumbnail image */}
+
                   <div className="series-title">
                     {series.series}
                     <p>{series.images.length} images</p>
@@ -115,71 +118,9 @@ const Index = () => {
                     <p>{series.date.split('-')[0]}</p>
                   </div>
                 </div>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="mobile-index">
-      <div className="sorting-buttons">
-        <button
-          className={sortBy === 'title' ? 'active-filter' : ''}
-          onClick={() => handleSort('title')}
-          id='sort-title'
-        >
-          Title
-          {sortBy === 'title' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-        
-        <button
-          className={sortBy === 'medium' ? 'active-filter' : ''}
-          onClick={() => handleSort('medium')}
-          id='sort-medium'
-        >
-          Medium
-          {sortBy === 'medium' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-        <button
-          className={sortBy === 'date' ? 'active-filter' : ''}
-          onClick={() => handleSort('date')}
-          id='sort-date'
-        >
-          Date
-          {sortBy === 'date' && (
-            <span className="sort-direction">
-              {sortDirection === 'asc' ? '▲' : '▼'}
-            </span>
-          )}
-        </button>
-      </div>
+              {/* </div> */}
 
-        {sortedData.map((series) => (
-          <div key={series.id} className="series-section">
-            <div className="margin-wrapper">
-              <Link to={`/slideshow/${series.id}`}>
-                <div className="series-item">
-                  <div className="series-title">
-                    {series.series}
-                    {series.natureOfWork && <p>{series.natureOfWork}</p>}
-                    <p>{series.images.length} images</p>
-                  </div>
-                  <div className="series-medium">
-                    <p>{series.medium}</p>
-                  </div>
-                  <div className="series-info">
-                    <p>{series.date.split('-')[0]}</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

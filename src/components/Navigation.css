@@ -1,82 +1,80 @@
+/* Navigation Styles */
 .navigation {
-
+    position: fixed;
+    top: 10px; /* Align to the top */
+    left: 10px; /* Align to the left */
+    z-index: 10; /* Ensure it's on top of other elements */
+    mix-blend-mode: multiply;
+    font-size: var(--font-size);
+    line-height: 1.2;
 }
 
 .navigation-wrapper {
-    z-index: 1000;
-        position: fixed;
-    /* width: 600px; */
-    left: 50%;
-    z-index: 1000;
-    transform: translateX(-50%);
-    /* left: 0; */
-    mix-blend-mode: multiply;
-    top: 0;
-    background-color: white;
-    color: var(--grey);
+    text-align: left;
+    font-family: var(--sans);
+    letter-spacing: -0.2pt;
 }
 
-.navigation nav ul {
-    /* list-style-type: none; */
-    /* padding: 0; */
-    text-align: center;
-    /* display: flex;  */
-    /* justify-content: center; */
-    gap: 20px;
-    text-transform: uppercase;
-}
-
-.navigation nav ul li {
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+}
+
+.navigation ul li:active {
+    opacity: 0.5;
+}
+
+.active-link {
+    /* font-weight: bold; */
+}
+
+/* Thumbnails Toggle Link Styles */
+.top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#toggle-view-link {
+    font-size: var(--font-size);
+    text-decoration: none;
+    font-family: var(--sans);
+}
+
+#toggle-view-link:hover {
+    color: #000;
+}
+
+/* Image Info Styles */
+.image-info-wrapper {
+    position: fixed;
+    top: 10px; /* Align it to the top of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Set width to 100% to span across the page */
+    max-width: 800px; /* Optional: Limit the max width if needed */
+    font-size: var(--font-size);
+    mix-blend-mode: multiply;
+    z-index: 10; /* Ensure it's above other content if needed */
+    text-align: center; /* Center-align the text content */
+    font-family: var(--sans);
 }
 
 .image-info {
     text-align: center;
+    position: relative;
 }
 
-.image-info-wrapper {
-    /* margin-top: -10px;
-    mix-blend-mode: multiply;
-    opacity: 0.3;
-    font-size: var(--font-size);
-    filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
-    letter-spacing: -0.5px;
-    mix-blend-mode: multiply;
-    line-height: 1.1; */
-    z-index: 999;
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    width: 100%; 
-    color: var(--grey);
-    mix-blend-mode: multiply;
-    font-size: var(--font-size);
-    filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
-    letter-spacing: -0.5px;
-    line-height: 1.1;
+/* Slide number styles */
+#slide-number {
+    font-feature-settings: 'tnum' 1; /* Enables tabular figures */
 }
 
-.image-info-wrapper ::selection {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-  }
-
-
-.image-info:hover{
-    /* text-decoration: underline; */
-    color: black;
+#slide-number span {
+    margin: 0 2px;
 }
 
-.navigation nav ul li:hover {
-    /* text-decoration: underline; */
-    color: black;
+#slide-number .active-slide-number {
+    text-decoration: underline;
 }
-
-
-.active-link {
-    /* Custom CSS styling for the active link */
-    /* font-weight: bold; */
-    /* text-decoration: underline; */
-    color: black;
-  }
-

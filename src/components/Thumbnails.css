@@ -1,0 +1,30 @@
+.thumbnails {
+    margin-top: 0;
+}
+
+.thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid layout */
+    gap: 15px; /* Spacing between thumbnails */
+    padding: 20px;
+    margin-top: var(--top-margin);
+  }
+  
+  .thumbnail-item {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    
+  }
+  
+  .thumbnail-image:active {
+    opacity: 0.5;
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+  

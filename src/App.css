@@ -12,10 +12,21 @@
   src: url(../public/Implicit-Upright-VF-Web.woff2);
 }
 
+@font-face {
+  font-family: Sabon;
+  src: url(../public/SabonLTStd-Roman.otf);
+}
+
+@font-face {
+  font-family: AG;
+  src: url(../public/AkzidenzGroteskPro-Md.otf);
+}
+
+
+
 html, body {
   height: 100%;
-  font-family: var(--font-family);
-
+  /* font-family: var(--font-family); */
 }
 
 ul, ol {
@@ -36,24 +47,4 @@ button, input {
 
 button, input {
   box-sizing: border-box;
-}
-
-.threshold-wrapper {
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  filter: blur(var(--threshold-blur)) contrast(var(--threshold-contrast));
-  letter-spacing: -0.5px;
-  background-color: white; 
-  mix-blend-mode: multiply;
-  padding: 10px;
-  line-height: 1.1;
-}
-
-.threshold-wrapper ::selection {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-}
-
-.margin-wrapper {
-  /* margin-top: 50px; */
 }

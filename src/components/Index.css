@@ -1,132 +1,67 @@
-/* src/components/Index.css */
-
-@media only screen and (min-width: 599px) {
-    .mobile-index {
-        display: none;
-    }
-    .index-page {
-        font-size: var(--font-size);
-        margin: 150px 30px;
-        max-width: 100%;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .desktop-index {
-        display: none;
-    }
-
-    .index-page {
-        font-size: var(--font-size);
-        margin: 150px 10px;
-        max-width: 100%;
-    }
-}
-
-
-
-.series-section {
-    padding-bottom: 60px;
-    border-top: 1px solid #000;
-}
-
-.series-item {
+.index-page {
+    font-size: 12pt;
+    /* max-width: 1200px; */
+    /* padding-bottom: var(--bottom-padding); */
+    margin-left: var(--margin-left);
+  }
+  
+  /* Desktop Index Grid Layout */
+  .desktop-index {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Series Section */
+  .series-section {
     display: flex;
-    justify-content: space-between;
-    /* max-width: 800px; */
-    padding-top: 6px;
-    font-size: 20px;
-    /* margin: auto; */
-}
-
-.series-item:hover {
-    text-decoration: underline;
-}
-
-.series-title {
-    flex: 2;
-    /* text-align: center; */
-}
-
-.series-title a {
-    text-decoration: none;
-    color: black;
-}
-
-.series-nature {
-    flex: 2;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    padding-bottom: var(--bottom-padding);
+  }
+  
+  /* Series Thumbnail Styling */
+  .series-thumbnail img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: cover;
+    /* margin-bottom: 15px; */
+  }
+  
+  /* Text Styling */
+  .series-item {
     text-align: left;
-}
+    font-family: AG, sans-serif;
+  }
 
-.series-medium {
-    flex: 1;
-    /* text-align: left; */
-}
-
-.series-info {
-    flex: 1;
-    text-align: right;
-}
-
-.series-title p,
-.series-medium p,
-.series-info p {
-    margin: 0;
-}
-
-.mobile-index .series-title,
-.mobile-index #sort-title {
-    flex: 3;
-}
-
-
-
-.sorting-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    /* color: var(--grey); */
-    color: black;
-}
-
-.sorting-buttons button {
-    background-color: transparent;
-    border: none;
+  .series-section:active {
+    opacity: 0.5;
+  }
+  
+  
+  .series-title p,
+  .series-title,
+  .series-nature p,
+  .series-medium p,
+  .series-info p {
     font-size: var(--font-size);
-    cursor: pointer;
-    font-family: var(--font-family);
-    text-align: left;
-}
+    letter-spacing: -0.5px;
+    margin: 0px;
+  }
+  
+  /* Responsive Styling for Mobile */
+  @media only screen and (max-width: 600px) {
+    .desktop-index {
+      grid-template-columns: 1fr;
+    }
+  
+    .series-thumbnail img {
+      height: auto; /* Allow images to adjust their height on smaller screens */
+    }
+  }
+  
 
-.sorting-buttons button:hover {
-    text-decoration: underline;
-    color: black;
-}
 
-/* Adjust the size of the sort direction triangle */
-.sort-direction {
-    font-size: 12px;
-    /* Smaller size for the arrow */
-    margin-left: 2px;
-    /* Small margin to separate it from the text */
-}
-
-/* Style for the active filter */
-.active-filter {
-    color: black;
-}
-
-#sort-title,
-#sort-nature {
-    flex: 2;
-}
-
-#sort-medium {
-    flex: 1;
-}
-
-#sort-date {
-    flex: 1;
-    text-align: right;
-}
+  

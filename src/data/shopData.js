@@ -2,7 +2,7 @@ const shopData = [
     {
       id: 1,
       name: 'Everything Was Right And Wrong',
-      description: 'A brief description of item one.',
+      description: 'Add a description here.',
       images: ['1_EverythingWasRightAndWrong-ShopCover.jpg', '2_EverythingWasRightAndWrong-Inside.jpg'],
       price: 19.99,
       purchaseLink: 'https://example.com/item1'
@@ -10,7 +10,7 @@ const shopData = [
     {
       id: 2,
       name: 'Everything Was Right And Wrong',
-      description: 'A brief description of item two.',
+      description: 'Add a description here.',
       images: ['1_EverythingWasRightAndWrong-ShopCover.jpg', '2_EverythingWasRightAndWrong-Inside.jpg'],
       price: 29.99,
       purchaseLink: 'https://example.com/item2'
